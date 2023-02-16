@@ -1,4 +1,5 @@
 # Demo program to represent what to do when there's input from the Stream Deck.
+# https://docs.python.org/3/library/asyncio-stream.html#tcp-echo-client-using-streams
 import asyncio
 
 async def tcp_echo_client(message):
