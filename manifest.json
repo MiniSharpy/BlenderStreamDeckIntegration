@@ -1,44 +1,38 @@
 {
   "Actions": [
     {
-      "Icon": "images/actionIcon",
-      "Name": "BlenderIntegrationAction",
+      "Icon": "images/blender",
+      "Name": "Change Sculpt Brush",
       "States": [
         {
-          "Image": "images/actionDefaultImage",
-          "TitleAlignment": "middle",
-          "FontSize": "16"
+          "Image": "images/blender",
+          "ShowTitle": false
         }
       ],
       "SupportedInMultiActions": false,
-      "Tooltip": "The first action for the BlenderIntegration Stream Deck plugin",
-      "UUID": "MiniSharpy.BlenderIntegration.DefaultPluginAction"
+      "Tooltip": "Change sculpt brush by sending a message to a non-blocking server ran in Blender.",
+      "UUID": "MiniSharpy.BlenderIntegration.ChangeSculptBrush"
     }
   ],
-	"Category": "Your Plugin Category",
-	"CategoryIcon": "images/category/categoryIcon",
-	"Disabled":  false,
-	"Author": "Your Name",
-	"CodePathWin": "BlenderStreamDeckIntegration.exe",
-	"CodePathMac":  "BlenderStreamDeckIntegration",
+  "Category": "Blender Integration",
+  "CategoryIcon": "images/blender",
+  "Disabled": false,
+  "Author": "Your Name",
+  "CodePathWin": "BlenderStreamDeckIntegration.exe",
   "PropertyInspectorPath": "property_inspector/property_inspector.html",
-  "Description": "Description of BlenderIntegration.",
+  "Description": "A collection of actions that interact with Blender in some way.",
   "Name": "BlenderIntegration",
-  "Icon": "images/pluginIcon",
+  "Icon": "images/blender",
   "URL": "https://www.elgato.com/gaming/stream-deck",
   "Version": "1.0",
-	"SDKVersion": 2,
-	"Software": {
-		"MinimumVersion":  "4.1"
-	},
-	"OS": [
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "4.1"
+  },
+  "OS": [
     {
-        "Platform": "mac",
-        "MinimumVersion" : "10.11"
-    },
-    {
-        "Platform": "windows",
-        "MinimumVersion" : "10"
+      "Platform": "windows",
+      "MinimumVersion": "10"
     }
   ]
 }

@@ -5,7 +5,7 @@ var websocket = null,
     inInfo = null,
     actionInfo = {},
     settingsModel = {
-        Port: 8888
+        Message: ""
     };
 
 function connectElgatoStreamDeckSocket(inPort, inUUID, inRegisterEvent, inInfo, inActionInfo) {
@@ -16,10 +16,10 @@ function connectElgatoStreamDeckSocket(inPort, inUUID, inRegisterEvent, inInfo, 
 
     //initialize values
     if (actionInfo.payload.settings.settingsModel) {
-        settingsModel.Port = actionInfo.payload.settings.settingsModel.Port;
+        settingsModel.Message = actionInfo.payload.settings.settingsModel.Message;
     }
 
-    document.getElementById('txtPortValue').value = settingsModel.Port;
+    document.getElementById('txtMessageValue').value = settingsModel.Message;
 
     websocket.onopen = function () {
         var json = { event: inRegisterEvent, uuid: inUUID };
@@ -34,9 +34,9 @@ function connectElgatoStreamDeckSocket(inPort, inUUID, inRegisterEvent, inInfo, 
         var sdEvent = jsonObj['event'];
         switch (sdEvent) {
             case "didReceiveSettings":
-                if (jsonObj.payload.settings.settingsModel.PortPort) {
-                    settingsModel.Port = jsonObj.payload.settings.settingsModel.Port;
-                    document.getElementById('txtPortValue').value = settingsModel.Port;
+                if (jsonObj.payload.settings.settingsModel.Message) {
+                    settingsModel.Message = jsonObj.payload.settings.settingsModel.Message;
+                    document.getElementById('txtMessageValue').value = settingsModel.Message;
                 }
                 break;
             default:

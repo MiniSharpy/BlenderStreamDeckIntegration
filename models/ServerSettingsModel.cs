@@ -6,6 +6,6 @@
 
         public int Port { get; set; } = 8888;
 
-        public string Message { get; set; } = "CLAY"; //string.Empty;
+        public string Message { get; set; } = string.Empty;
   }
 }
