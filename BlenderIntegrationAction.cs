@@ -19,7 +19,10 @@ namespace BlenderStreamDeckIntegration
             using TcpClient client = new(SettingsModel.Server, SettingsModel.Port);
 
             // Translate the passed message into ASCII and store it as a Byte array.
-            byte[] data = Encoding.ASCII.GetBytes(SettingsModel.Message);
+            byte[] data = Encoding.ASCII.GetBytes(SettingsModel.Message.ToUpper());
+            // Ideally would want to use the title as the message to send, after some formatting, to simplify the 
+            // the input needed from the Stream Deck GUI. 
+
 
             // Get a client stream for reading and writing.
             NetworkStream stream = client.GetStream();
